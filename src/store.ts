@@ -1,5 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit';
-import {TodoReducer} from "./reducers/ToDo";
+import {TodoReducer} from "./reducers/ToDo/reducer";
 import {
     Persistor, persistStore, persistReducer, FLUSH,
     REHYDRATE,

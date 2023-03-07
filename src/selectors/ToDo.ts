@@ -1,3 +1,3 @@
-import {TodoState} from '../reducers/ToDo';
+import {TodoState} from '../reducers/ToDo/reducer';
 
 export const selectAllTodos = (state: TodoState) => state.todos;

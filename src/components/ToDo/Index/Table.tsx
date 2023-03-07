@@ -8,7 +8,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DoneIcon from '@mui/icons-material/Done';
 import RemoveDoneIcon from '@mui/icons-material/RemoveDone';
 import {changeToDoStatus, removeToDo} from "../../../actions/ToDo";
-import {ToDo} from "../../../reducers/ToDo";
+import {ToDo} from "../../../reducers/ToDo/reducer";
 import {Link} from "react-router-dom";
 
 const StyledTableCell = styled(TableCell)(({theme}: { theme: any }) => ({
@@ -46,7 +46,7 @@ export default function Index() {
 
     return (
         <TableContainer>
-            <Table sx={{minWidth: 650}} aria-label="simple table">
+            <Table sx={{minWidth: 650}} aria-label="simple table" data-testid="todo-index">
                 <TableHead>
                     <TableRow>
                         <StyledTableCell align="right">Name</StyledTableCell>
