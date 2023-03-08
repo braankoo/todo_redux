@@ -1,7 +1,6 @@
 import produce, {Draft} from "immer";
-import {TodoState} from "./reducer";
-import {ToDo} from "./reducer";
 import {PayloadAction} from "@reduxjs/toolkit";
+import {ToDo, TodoState} from "src/types/Types";
 
 export function handleAddTodo(
     state: Draft<TodoState>,

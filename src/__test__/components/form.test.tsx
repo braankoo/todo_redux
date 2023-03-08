@@ -1,7 +1,7 @@
 import {render, screen, fireEvent} from '@testing-library/react';
-import Form from "../../components/ToDo/Form/Form";
+import Form from "src/components/ToDo/Form/Form";
 import {Provider} from "react-redux";
-import store from "../../store";
+import store from "src/store";
 import {MemoryRouter} from "react-router-dom";
 
 describe('Form', () => {

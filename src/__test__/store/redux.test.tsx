@@ -1,7 +1,7 @@
 import configureStore from 'redux-mock-store';
 import {Middleware} from "redux";
-import {addToDo, changeToDoStatus, removeToDo, ToDoActionTypes} from "../../actions/ToDo";
-import {ToDo} from "../../reducers/ToDo/reducer";
+import {addToDo, changeToDoStatus, removeToDo, ToDoActionTypes} from "src/actions/ToDo";
+import {ToDo} from "src/types/Types";
 
 describe('TodoReducer', () => {
     const middlewares = [] as Middleware[];

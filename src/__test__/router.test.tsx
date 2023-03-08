@@ -1,8 +1,8 @@
 import {render, screen} from '@testing-library/react';
-import Router from "../Router";
+import Router from "src/Router";
 import {MemoryRouter} from "react-router-dom";
 import {Provider} from "react-redux";
-import store from "../store";
+import store from "src/store";
 
 describe('TodoReducer', () => {
     it('check index route', () => {

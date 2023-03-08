@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {Link} from "react-router-dom";
 import {selectAllTodos} from "../../../selectors/ToDo";
 import {Dispatch} from "redux";
-import {ToDo} from "../../../reducers/ToDo/reducer";
+import {ToDo} from "src/types/Types";
 
 
 type FormProps = {
@@ -27,6 +27,7 @@ export default function Form({ToDo, dataTestId, onSubmit}: FormProps) {
     const [submitted, setSubmitted] = useState<boolean>(false);
     const [message, setMessage] = useState<string>(ToDo?.Description || '');
     const todos = useSelector(selectAllTodos);
+
     const createToDo = (id: number, name: string, description: string) => ({
         ID: id,
         Name: name,
@@ -113,7 +114,6 @@ export default function Form({ToDo, dataTestId, onSubmit}: FormProps) {
                         </ButtonGroup>
                     </Grid>
                 </Grid>
-
             </Box>
         </form>
 

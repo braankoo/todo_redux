@@ -1,5 +1,6 @@
 import {createAction} from '@reduxjs/toolkit';
-import { ToDo} from "../reducers/ToDo/reducer";
+import {ToDo} from "src/types/Types";
+
 export enum ToDoActionTypes {
     ADD = 'ADD',
     REMOVE = 'REMOVE',

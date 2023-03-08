@@ -1,5 +1,5 @@
-import {selectAllTodos} from '../../selectors/ToDo';
-import {ToDo} from "../../reducers/ToDo/reducer";
+import {selectAllTodos} from 'src/selectors/ToDo';
+import {ToDo} from "src/types/Types";
 
 describe('selectAllTodos', () => {
     it('returns an array of todos from the state', () => {

@@ -1,17 +1,7 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {addToDo, changeToDoStatus, removeToDo, updateToDo} from '../../actions/ToDo';
+import {addToDo, changeToDoStatus, removeToDo, updateToDo} from 'src/actions/ToDo';
 import {handleAddTodo, handleRemoveTodo, handleUpdateToDo, handleTodoStatus} from "./helpers";
-
-interface ToDo {
-    Name: string;
-    Description?: string;
-    Status: boolean;
-    ID: number
-}
-
-interface TodoState {
-    todos: ToDo[];
-}
+import {ToDo, TodoState} from "src/types/Types";
 
 const initialState: TodoState = {
     todos: [],

@@ -1,5 +1,6 @@
-import {ToDo, TodoReducer} from "../../reducers/ToDo/reducer";
-import {ToDoActionTypes} from "../../actions/ToDo";
+import {TodoReducer} from "src/reducers/ToDo/reducer";
+import {ToDoActionTypes} from "src/actions/ToDo";
+import {ToDo} from "src/reducers/ToDo/reducer";
 
 
 describe('TodoReducer', () => {

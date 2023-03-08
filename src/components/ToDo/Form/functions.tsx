@@ -1,7 +1,7 @@
 import React, {FormEvent} from "react";
 import {Dispatch} from "redux";
-import {ToDo} from "../../../reducers/ToDo/reducer";
-import {addToDo, updateToDo} from "../../../actions/ToDo";
+import {addToDo, updateToDo} from "src/actions/ToDo";
+import {ToDo} from "src/types/Types";
 
 const createHandler = (
     event: FormEvent<HTMLFormElement>,

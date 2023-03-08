@@ -1,4 +1,4 @@
-import Table from "../../components/ToDo/Index/Table"
+import Table from "src/components/ToDo/Index/Table"
 
 export default function Index() {
     return (
