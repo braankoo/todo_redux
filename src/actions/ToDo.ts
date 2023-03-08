@@ -7,6 +7,7 @@ export enum ToDoActionTypes {
     UPDATE = 'UPDATE',
     CHANGE_STATUS = 'CHANGE_STATUS',
 }
+
 export const addToDo = createAction<ToDo>(ToDoActionTypes.ADD);
 export const updateToDo = createAction<ToDo>(ToDoActionTypes.UPDATE);
 export const removeToDo = createAction<ToDo>(ToDoActionTypes.REMOVE);

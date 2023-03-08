@@ -6,11 +6,12 @@ export function handleAddTodo(
     state: Draft<TodoState>,
     action: PayloadAction<ToDo>
 ) {
-    const toDoIds = state.todos.map(todo => todo.ID);
-    if (toDoIds.length === 0) {
-        toDoIds.push(0);
-    }
-    action.payload.ID = Math.max(...toDoIds) + 1;
+    const toDoIds: number[] = state.todos
+        .filter(todo => typeof todo.ID !== 'undefined')
+        .map(todo => todo.ID as number);
+
+    action.payload.ID = toDoIds.length > 0 ? Math.max(...toDoIds) + 1 : 1;
+
     state.todos.push(action.payload);
 }
 

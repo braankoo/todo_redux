@@ -52,7 +52,7 @@ const getPaginatedTodos = (todos: ToDo[], page: number, rowsPerPage: number) => 
 export default function Index() {
     const dispatch = useDispatch();
     const [page, setPage] = useState<number>(0);
-    const [rowsPerPage, setRowsPerPage] = useState<number>(1);
+    const [rowsPerPage, setRowsPerPage] = useState<number>(5);
     const [filter, setFilter] = useState<string>('');
     const total = useSelector((state: TodoState) => {
         return getFilteredTodos(state, filter);

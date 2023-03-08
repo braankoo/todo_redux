@@ -7,9 +7,9 @@ describe('TodoReducer', () => {
 
     test('handles addToDo action', () => {
         const initialState = {todos: []};
-        const action = {type: ToDoActionTypes.ADD, payload: {ID: 0, Name: 'buy milk', Status: false}};
+        const action = {type: ToDoActionTypes.ADD, payload: {Name: 'buy milk', Status: false}};
         const nextState = TodoReducer(initialState, action);
-        expect(nextState).toEqual({todos: [{ID: 0, Name: 'buy milk', Status: false}]});
+        expect(nextState).toEqual({todos: [{ID: 1, Name: 'buy milk', Status: false}]});
     });
 
     test('handles removeToDo action', () => {

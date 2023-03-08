@@ -1,17 +1,16 @@
 import {Box, Button, ButtonGroup, TextField, Alert, Grid} from "@mui/material";
 import React, {FormEvent, useState} from "react";
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {Link} from "react-router-dom";
-import {selectAllTodos} from "../../../selectors/ToDo";
 import {Dispatch} from "redux";
 import {ToDo} from "src/types/Types";
 
 
 type FormProps = {
-    ToDo?: ToDo
+    ToDo: ToDo
     dataTestId: string,
     onSubmit: (
-        event: FormEvent<HTMLFormElement>,
+        event: React.FormEvent<HTMLFormElement>,
         dispatch: Dispatch,
         toDo: ToDo,
         setName: React.Dispatch<string>,
@@ -26,14 +25,14 @@ export default function Form({ToDo, dataTestId, onSubmit}: FormProps) {
     const [description, setDescription] = useState<string>(ToDo?.Description || '');
     const [submitted, setSubmitted] = useState<boolean>(false);
     const [message, setMessage] = useState<string>(ToDo?.Description || '');
-    const todos = useSelector(selectAllTodos);
-
-    const createToDo = (id: number, name: string, description: string) => ({
-        ID: id,
-        Name: name,
-        Description: description,
-        Status: true
-    });
+    const toDoClone = (name: string, description: string): ToDo => {
+        return {
+            ID: ToDo.ID,
+            Name: name,
+            Description: description,
+            Status: ToDo.Status
+        }
+    };
 
     return (
         <form
@@ -41,7 +40,7 @@ export default function Form({ToDo, dataTestId, onSubmit}: FormProps) {
                 onSubmit(
                     event,
                     dispatch,
-                    createToDo(todos.length, name, description),
+                    toDoClone(name, description),
                     setName,
                     setDescription,
                     setSubmitted,

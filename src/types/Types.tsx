@@ -2,7 +2,7 @@ interface ToDo {
     Name: string;
     Description?: string;
     Status: boolean;
-    ID: number
+    ID?: number
 }
 
 interface TodoState {
